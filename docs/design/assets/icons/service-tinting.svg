@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <title>Тонировка</title>
+  <path d="M7 30V18l4-7h26l4 7v12"/>
+  <path d="M7 18h34M13 11l4 7M35 11l-4 7M6 30h36v7H6z"/>
+  <circle cx="14" cy="31" r="2"/><circle cx="34" cy="31" r="2"/>
+</svg>
