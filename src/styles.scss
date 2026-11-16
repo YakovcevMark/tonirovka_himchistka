@@ -40,6 +40,7 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
 .header-main { display: flex; align-items: center; justify-content: space-between; min-height: 94px; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; width: max-content; color: $text; text-decoration: none; }
 .brand-logo { width: 62px; height: 36px; object-fit: contain; }
+.brand-logo.brand-logo--round { height: auto; aspect-ratio: 1; border-radius: 50%; }
 .brand-wordmark { display: inline-flex; flex-direction: column; font-family: 'Space Grotesk', Arial, sans-serif; font-size: 1.22rem; font-weight: 700; letter-spacing: -.06em; line-height: .84; }
 .brand-wordmark small { margin-top: 7px; font-family: 'Manrope', Arial, sans-serif; font-size: .43rem; font-weight: 800; letter-spacing: .2em; line-height: 1; }
 .header-actions { display: flex; align-items: center; gap: 13px; }
