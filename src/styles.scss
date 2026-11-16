@@ -169,6 +169,8 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
 .brand--footer .brand-logo { width: 47px; height: 28px; }
 .brand--footer .brand-wordmark { font-size: 1rem; }
 .footer-inner p { margin: 0; color: $muted; font-size: .68rem; text-align: center; }
+.footer-business { padding-bottom: 24px; }
+.footer-business p { margin: 0; color: $muted; font-size: .75rem; line-height: 1.7; overflow-wrap: anywhere; }
 .back-top { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid $line; border-radius: 50%; color: $text; font-size: 1rem; text-decoration: none; }
 .back-top:hover { border-color: $text; }
 
