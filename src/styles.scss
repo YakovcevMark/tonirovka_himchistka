@@ -53,6 +53,7 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
 .social-link { display: inline-grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgb(255 255 255 / 24%); border-radius: 50%; color: $text; background: rgb(0 0 0 / 36%); box-shadow: 0 8px 24px rgb(0 0 0 / 20%); text-decoration: none; backdrop-filter: blur(14px); transition: transform .22s ease, border-color .22s ease, background .22s ease; }
 .social-link:hover { border-color: $text; background: rgb(255 255 255 / 13%); transform: translateY(-3px); }
 .social-link svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.social-link .social-icon { width: 23px; height: 23px; }
 .social-link .fill { fill: currentColor; stroke: none; }
 .header-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 46px; border: 1px solid $text; border-radius: 999px; padding: 0 20px; color: $text; background: rgb(0 0 0 / 27%); font-size: .67rem; font-weight: 800; letter-spacing: .055em; text-decoration: none; text-transform: uppercase; backdrop-filter: blur(14px); transition: background .22s ease, color .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease; }
 .header-cta { min-height: 42px; }
@@ -85,8 +86,7 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
 .hero-logo-stage { position: relative; display: grid; min-height: 410px; place-items: center; }
 .hero-logo { position: relative; z-index: 2; width: min(100%, 510px); height: auto; filter: drop-shadow(0 16px 34px rgb(0 0 0 / 60%)); animation: logo-float 8s ease-in-out infinite; }
 .hero-logo-stage::after { position: absolute; z-index: 1; width: min(72%, 430px); height: min(72%, 330px); border-radius: 50%; background: radial-gradient(circle, rgb(255 255 255 / 18%), rgb(255 255 255 / 5%) 38%, transparent 70%); content: ''; filter: blur(7px); }
-.hero-logo-kicker, .hero-logo-caption { position: absolute; z-index: 3; color: rgb(255 255 255 / 57%); font-size: .62rem; font-weight: 800; letter-spacing: .14em; line-height: 1.45; text-transform: uppercase; }
-.hero-logo-kicker { top: 23px; right: 8%; }
+.hero-logo-caption { position: absolute; z-index: 3; color: rgb(255 255 255 / 57%); font-size: .62rem; font-weight: 800; letter-spacing: .14em; line-height: 1.45; text-transform: uppercase; }
 .hero-logo-caption { bottom: 22px; left: 12%; }
 .hero-logo-orbit { position: absolute; z-index: 0; border: 1px solid rgb(255 255 255 / 13%); border-radius: 50%; transform: rotate(-17deg); }
 .hero-logo-orbit--one { width: 92%; height: 52%; }
@@ -234,7 +234,7 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
   .phone-link > span:last-child, .header-divider { display: none; }
   .social-links { gap: 5px; }
   .social-link { width: 36px; height: 36px; }
-  .social-link svg { width: 20px; height: 20px; }
+  .social-link svg, .social-link .social-icon { width: 20px; height: 20px; }
   .header-cta { min-height: 38px; padding: 0 12px; font-size: .57rem; }
   .site-nav { gap: 23px; }
   .site-nav a { padding-top: 11px; padding-bottom: 13px; font-size: .57rem; }
@@ -248,7 +248,6 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
   .hero-logo { width: min(100%, 365px); }
   .hero-logo-orbit--one { width: 85%; height: 60%; }
   .hero-logo-orbit--two { width: 63%; height: 82%; }
-  .hero-logo-kicker { top: 3px; right: 4%; font-size: .54rem; }
   .hero-logo-caption { bottom: 5px; left: 8%; font-size: .56rem; }
   .hero-description { max-width: 360px; margin: 18px 0 24px; font-size: .81rem; line-height: 1.62; }
   .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
@@ -285,8 +284,7 @@ h1 span, h2 span { display: inline-block; margin-left: .08em; font-weight: 500; 
   .contact-details { width: 100%; justify-self: stretch; align-self: start; text-align: left; }
   .contact-details > p { margin-left: 0; }
   .social-row { justify-content: flex-start; }
-  .contact-actions { display: grid; grid-template-columns: 1fr 1fr; }
-  .contact-actions .button:first-child { grid-column: 1 / -1; }
+  .contact-actions { display: grid; grid-template-columns: 1fr; }
   .footer-inner { min-height: 90px; flex-wrap: wrap; padding-top: 20px; padding-bottom: 20px; }
   .footer-inner p { order: 3; width: 100%; text-align: left; }
   .modal-dialog { max-height: calc(100dvh - 24px); padding: 32px 19px 23px; border-radius: 17px; }
