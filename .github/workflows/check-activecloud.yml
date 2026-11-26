@@ -1,0 +1,23 @@
+name: Check ActiveCloud FTP
+
+on: workflow_dispatch
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    environment: FTP
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Compare credentials and check FTPS login
+        run: python3 .github/scripts/check_activecloud.py --check
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_CHECK: ${{ secrets.FTP_CHECK }}
