@@ -1,0 +1,40 @@
+name: Deploy to ActiveCloud
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: activecloud-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Enable pushes with a repository variable after the first successful manual rollout.
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'workflow_dispatch' || vars.ACTIVECLOUD_AUTODEPLOY == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: FTP
+      url: https://ldvdetailing.pro/
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          VITE_BASE_PATH: /
+      - name: Publish and verify ldvdetailing.pro
+        run: python3 .github/scripts/deploy_activecloud.py
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
