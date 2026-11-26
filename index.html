@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="LDV Detailing в Гомеле: тонировка, химчистка салона, перетяжка потолков и стоек, полировка фар и оклейка автомобиля."
+      content="LDV Detailing в Гомеле. Тонировка задней полусферы от 200 р и оклейка кузова бронеплёнкой с гарантией 5 лет. Полировка двух фар 60–120 р, перетяжка потолка от 300 р."
     />
     <meta name="theme-color" content="#090909" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="%BASE_URL%images/brand/ldv-detailing-favicon-32.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="%BASE_URL%images/brand/ldv-detailing-favicon-192.png" />
     <link rel="stylesheet" href="src/styles.scss" />
-    <title>LDV Detailing</title>
+    <link rel="canonical" href="https://ldvdetailing.pro/" />
+    <title>Тонировка авто и оклейка бронеплёнкой в Гомеле | LDV Detailing</title>
   </head>
   <body>
     <header class="site-header">
@@ -91,67 +92,112 @@
             <p class="eyebrow">Что можно сделать</p>
             <h2 id="services-title">Услуги <span>и цены</span></h2>
           </div>
-          <p class="section-intro">Нажмите на услугу — откроется описание, цены и фотографии работ.</p>
+          <p class="section-intro">Выберите услугу, чтобы узнать стоимость и условия записи.</p>
         </div>
 
         <div class="service-grid">
-          <article class="service-card" data-service="tinting" tabindex="0" role="button" aria-label="Открыть услугу: тонировка">
+          <article class="service-card" data-service="tinting" id="tinting">
             <img src="images/works/tinting-16.webp" alt="Автомобиль в студии, пример работы LDV Detailing" loading="lazy" />
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon"><img src="images/design-icons/service-tinting.svg" alt="" /></div>
               <p class="service-number">01 / 05</p>
-              <h3>Тонировка</h3>
-              <p class="service-price">от 200 р · по типу кузова</p>
-              <button class="card-action" type="button">Смотреть услугу <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></button>
+              <h3>Тонировка задней полусферы</h3>
+              <p class="service-price">от 200 р · гарантия 5 лет</p>
+              <details class="service-details">
+                <summary class="card-action">Цены по типу кузова <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></summary>
+                <p class="service-description">Тонируем всю заднюю полусферу автомобиля в Гомеле. В стоимость входят заднее стекло и задние боковые стёкла.</p>
+                <ul class="service-prices">
+                  <li>Хэтчбек — от 200 р</li>
+                  <li>Универсал — от 230 р</li>
+                  <li>Седан — от 250 р</li>
+                  <li>Минивэн — от 270 р</li>
+                  <li>Бус — от 300 р</li>
+                </ul>
+                <p class="service-note">Гарантия на тонировку задней полусферы — 5 лет.</p>
+              </details>
             </div>
           </article>
 
-          <article class="service-card" data-service="interior" tabindex="0" role="button" aria-label="Открыть услугу: химчистка салона">
+          <article class="service-card" data-service="interior" id="interior">
             <img src="images/works/interior-cleaning-02.webp" alt="Салон автомобиля, пример работы LDV Detailing" loading="lazy" />
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon"><img src="images/design-icons/service-cleaning.svg" alt="" /></div>
               <p class="service-number">02 / 05</p>
-              <h3>Химчистка<br />салона</h3>
+              <h3>Химчистка салона</h3>
               <p class="service-price">от 200 р · по типу авто</p>
-              <button class="card-action" type="button">Смотреть услугу <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></button>
+              <details class="service-details">
+                <summary class="card-action">Цены на химчистку <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></summary>
+                <p class="service-description">Стоимость химчистки зависит от типа автомобиля и состояния салона.</p>
+                <ul class="service-prices">
+                  <li>Седан или хэтчбек — от 200 р</li>
+                  <li>Универсал — от 250 р</li>
+                  <li>Минивэн — от 200 р</li>
+                </ul>
+                <p class="service-note">Для предварительной оценки отправьте мастеру фотографии салона в Viber.</p>
+              </details>
             </div>
           </article>
 
-          <article class="service-card" data-service="ppf" tabindex="0" role="button" aria-label="Открыть услугу: антигравийная плёнка">
+          <article class="service-card" data-service="ppf" id="ppf">
             <img src="images/works/ppf-front-application.webp" alt="Оклейка передней части белого автомобиля антигравийной плёнкой" loading="lazy" />
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon"><img src="images/design-icons/service-ppf.svg" alt="" /></div>
               <p class="service-number">03 / 05</p>
-              <h3>Антигравийная<br />плёнка</h3>
-              <p class="service-price">индивидуальный расчёт</p>
-              <button class="card-action" type="button">Уточнить детали <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></button>
+              <h3>Оклейка кузова бронеплёнкой</h3>
+              <p class="service-price">индивидуальный расчёт · гарантия 5 лет</p>
+              <details class="service-details">
+                <summary class="card-action">Как рассчитывается цена <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></summary>
+                <p class="service-description">Бронирование кузова — это оклейка автомобиля защитной антигравийной плёнкой. Цена зависит от модели автомобиля, зон оклейки и выбранного материала.</p>
+                <ul class="service-prices">
+                  <li>Для расчёта назовите мастеру модель автомобиля и детали кузова, которые хотите защитить.</li>
+                </ul>
+                <p class="service-note">Гарантия на оклейку кузова бронеплёнкой — 5 лет.</p>
+              </details>
             </div>
           </article>
 
-          <article class="service-card" data-service="roof" tabindex="0" role="button" aria-label="Открыть услугу: перетяжка потолка и стоек">
+          <article class="service-card" data-service="roof" id="roof">
             <img src="images/works/roof-upholstery-01.webp" alt="Потолок автомобиля в студии LDV Detailing" loading="lazy" />
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon"><img src="images/design-icons/service-roof.svg" alt="" /></div>
               <p class="service-number">04 / 05</p>
-              <h3>Перетяжка<br />потолка и стоек</h3>
+              <h3>Перетяжка потолка и стоек</h3>
               <p class="service-price">потолок от 300 р</p>
-              <button class="card-action" type="button">Смотреть услугу <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></button>
+              <details class="service-details">
+                <summary class="card-action">Цены по элементам салона <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></summary>
+                <p class="service-description">Потолок, стойки и дверные карты рассчитываются отдельно. Итоговая цена перетяжки потолка в машине зависит от материала и объёма работ.</p>
+                <ul class="service-prices">
+                  <li>Потолок — от 300 р</li>
+                  <li>Стойки — от 40 р</li>
+                  <li>Дверные карты — от 50 р</li>
+                </ul>
+                <p class="service-note">Материал, стоимость и срок мастер согласует с вами до записи.</p>
+              </details>
             </div>
           </article>
 
-          <article class="service-card" data-service="headlights" tabindex="0" role="button" aria-label="Открыть услугу: полировка фар">
+          <article class="service-card" data-service="headlights" id="headlights">
             <img src="images/works/headlight-polishing-01.webp" alt="Фара автомобиля, пример работы LDV Detailing" loading="lazy" />
             <div class="service-overlay"></div>
             <div class="service-content">
               <div class="service-icon"><img src="images/design-icons/service-headlights.svg" alt="" /></div>
               <p class="service-number">05 / 05</p>
-              <h3>Полировка<br />фар</h3>
-              <p class="service-price">от 60 р</p>
-              <button class="card-action" type="button">Смотреть услугу <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></button>
+              <h3>Полировка фар</h3>
+              <p class="service-price">60–120 р за две фары</p>
+              <details class="service-details">
+                <summary class="card-action">Стоимость полировки и покрытий <span aria-hidden="true"><img class="arrow-icon arrow-icon--diagonal" src="images/design-icons/arrow-up-right.svg" alt="" /></span></summary>
+                <p class="service-description">Стоимость полировки зависит от состояния фар. Для покрытия лаком и защиты бронеплёнкой действуют отдельные расценки.</p>
+                <ul class="service-prices">
+                  <li>Полировка двух фар — 60–120 р</li>
+                  <li>Покрытие фары лаком — от 180 р</li>
+                  <li>Покрытие бронеплёнкой — от 150 р</li>
+                </ul>
+                <p class="service-note">Итоговую стоимость мастер согласует с вами до начала работы.</p>
+              </details>
             </div>
           </article>
         </div>
@@ -201,7 +247,7 @@
         <div class="benefits-grid">
           <div class="benefit-item"><img src="images/design-icons/benefit-payment.svg" alt="" /><strong>Наличный и безналичный расчёт</strong></div>
           <div class="benefit-item"><img src="images/design-icons/benefit-handshake.svg" alt="" /><strong>Работаем с физическими и юридическими лицами</strong></div>
-          <div class="benefit-item"><img src="images/design-icons/benefit-shield.svg" alt="" /><strong>Гарантия зависит от работы и материала</strong></div>
+          <div class="benefit-item"><img src="images/design-icons/benefit-shield.svg" alt="" /><strong>5 лет гарантии на тонировку и оклейку кузова бронеплёнкой</strong></div>
           <div class="benefit-item"><img src="images/design-icons/benefit-car.svg" alt="" /><strong>Цена зависит от автомобиля и задачи</strong></div>
         </div>
       </section>

@@ -1,61 +1,31 @@
-const SERVICE_DATA = {
-  tinting: {
-    title: 'Тонировка автомобилей',
-    description: 'Стоимость зависит от типа кузова и выбранной задачи. Точную комплектацию и время мастер уточняет по телефону.',
-    prices: ['Седан — от 250 р', 'Универсал — от 230 р', 'Хэтчбек — от 200 р', 'Минивэн — от 270 р', 'Бус — от 300 р'],
-    note: 'Напишите мастеру, чтобы уточнить доступные варианты для вашего автомобиля.',
-    photos: [
-      ['images/works/tinting-05.webp', 'Автомобиль в студии LDV Detailing'],
-      ['images/works/tinting-10.webp', 'Минивэн в студии LDV Detailing'],
-      ['images/works/tinting-14.webp', 'Автомобиль в студии LDV Detailing'],
-      ['images/works/tinting-16.webp', 'Автомобиль в студии LDV Detailing'],
-    ],
-  },
-  interior: {
-    title: 'Химчистка салона',
-    description: 'Стоимость зависит от типа автомобиля и состояния салона. Перед записью обсудим объём работ и удобное время.',
-    prices: ['Седан / хэтчбек — от 200 р', 'Универсал — от 250 р', 'Минивэн — от 200 р'],
-    note: 'Для предварительной оценки можно отправить мастеру фотографии салона в мессенджере.',
-    photos: [
-      ['images/works/interior-cleaning-01.webp', 'Салон автомобиля, пример работы'],
-      ['images/works/interior-cleaning-02.webp', 'Салон автомобиля, рабочий процесс'],
-      ['images/works/interior-cleaning-03.webp', 'Салон автомобиля, рабочий процесс'],
-      ['images/works/interior-cleaning-seatbelt-before-after.webp', 'Ремень безопасности до и после химчистки'],
-      ['images/works/interior-cleaning-door-sill-before-after.webp', 'Дверной порог салона до и после чистки'],
-      ['images/works/interior-cleaning-trunk-before-after.webp', 'Багажник автомобиля до и после химчистки'],
-      ['images/works/interior-cleaning-seat-before-after.webp', 'Переднее сиденье до и после химчистки'],
-      ['images/works/interior-cleaning-carpet-before-after.webp', 'Ковровое покрытие салона до и после химчистки'],
-    ],
-  },
-  ppf: {
-    title: 'Оклейка антигравийной плёнкой',
-    description: 'Для этой услуги стоимость рассчитывается индивидуально по автомобилю, зонам защиты и выбранному материалу.',
-    prices: ['Стоимость — после уточнения задачи и автомобиля'],
-    note: 'Зоны оклейки и материал согласовываются с мастером до начала работ.',
-    photos: [
-      ['images/works/ppf-front-application.webp', 'Оклейка передней части белого автомобиля антигравийной плёнкой'],
-    ],
-  },
-  roof: {
-    title: 'Перетяжка потолка и стоек',
-    description: 'В стоимость входит конкретная работа по элементу салона. Материал и объём согласовываются до записи.',
-    prices: ['Потолок — от 300 р', 'Стойки — от 40 р', 'Дверные карты — от 50 р'],
-    note: 'Срок и итоговую цену мастер уточняет после понимания объёма работ.',
-    photos: [
-      ['images/works/roof-upholstery-01.webp', 'Потолок автомобиля в процессе работы'],
-      ['images/works/roof-upholstery-02.webp', 'Стойка салона автомобиля'],
-    ],
-  },
-  headlights: {
-    title: 'Полировка фар',
-    description: 'Восстановление внешнего вида фар с расчётом по конкретной задаче автомобиля.',
-    prices: ['Полировка фар — от 60 р', 'Покрытие фары лаком — от 180 р', 'Покрытие бронеплёнкой — от 150 р'],
-    note: 'Итог зависит от состояния фар и согласовывается до начала работ.',
-    photos: [
-      ['images/works/headlight-polishing-01.webp', 'Фара автомобиля, пример работы'],
-      ['images/works/headlight-polishing-02.webp', 'Фара автомобиля, пример работы'],
-    ],
-  },
+const SERVICE_PHOTOS = {
+  tinting: [
+    ['images/works/tinting-05.webp', 'Автомобиль в студии LDV Detailing'],
+    ['images/works/tinting-10.webp', 'Минивэн в студии LDV Detailing'],
+    ['images/works/tinting-14.webp', 'Автомобиль в студии LDV Detailing'],
+    ['images/works/tinting-16.webp', 'Автомобиль в студии LDV Detailing'],
+  ],
+  interior: [
+    ['images/works/interior-cleaning-01.webp', 'Салон автомобиля, пример работы'],
+    ['images/works/interior-cleaning-02.webp', 'Салон автомобиля, рабочий процесс'],
+    ['images/works/interior-cleaning-03.webp', 'Салон автомобиля, рабочий процесс'],
+    ['images/works/interior-cleaning-seatbelt-before-after.webp', 'Ремень безопасности до и после химчистки'],
+    ['images/works/interior-cleaning-door-sill-before-after.webp', 'Дверной порог салона до и после чистки'],
+    ['images/works/interior-cleaning-trunk-before-after.webp', 'Багажник автомобиля до и после химчистки'],
+    ['images/works/interior-cleaning-seat-before-after.webp', 'Переднее сиденье до и после химчистки'],
+    ['images/works/interior-cleaning-carpet-before-after.webp', 'Ковровое покрытие салона до и после химчистки'],
+  ],
+  ppf: [
+    ['images/works/ppf-front-application.webp', 'Оклейка передней части белого автомобиля антигравийной плёнкой'],
+  ],
+  roof: [
+    ['images/works/roof-upholstery-01.webp', 'Потолок автомобиля в процессе работы'],
+    ['images/works/roof-upholstery-02.webp', 'Стойка салона автомобиля'],
+  ],
+  headlights: [
+    ['images/works/headlight-polishing-01.webp', 'Фара автомобиля, пример работы'],
+    ['images/works/headlight-polishing-02.webp', 'Фара автомобиля, пример работы'],
+  ],
 };
 
 const modal = document.querySelector('#service-modal');
@@ -77,20 +47,16 @@ let lightboxIndex = 0;
 let lightboxScale = 1;
 
 /**
- * Fills the service modal with the confirmed price and photo data for one service.
- * Gallery thumbnails are buttons so the same content works with mouse and keyboard.
+ * Mirrors the card's static price list so search engines and modal visitors see the same offer.
  */
-function fillServiceModal(service) {
-  modalTitle.textContent = service.title;
-  modalDescription.textContent = service.description;
-  modalNote.textContent = service.note;
-  modalPrices.replaceChildren(...service.prices.map((price) => {
-    const item = document.createElement('li');
-    item.textContent = price;
-    return item;
-  }));
+function fillServiceModal(card, photos) {
+  modalTitle.textContent = card.querySelector('h3').textContent;
+  modalDescription.textContent = card.querySelector('.service-description').textContent;
+  modalNote.textContent = card.querySelector('.service-note').textContent;
+  const prices = card.querySelectorAll('.service-prices li');
+  modalPrices.replaceChildren(...Array.from(prices, (price) => price.cloneNode(true)));
 
-  if (service.photos.length === 0) {
+  if (photos.length === 0) {
     const empty = document.createElement('p');
     empty.className = 'modal-empty';
     empty.textContent = 'Фото работ для этой услуги добавим после уточнения подборки.';
@@ -98,7 +64,7 @@ function fillServiceModal(service) {
     return;
   }
 
-  const gallery = service.photos.map(([src, alt]) => ({ src, alt }));
+  const gallery = photos.map(([src, alt]) => ({ src, alt }));
   modalGallery.replaceChildren(...gallery.map((item, index) => {
     const button = document.createElement('button');
     button.type = 'button';
@@ -117,12 +83,9 @@ function fillServiceModal(service) {
 /**
  * Opens a service dialog and returns focus to the triggering card after closing.
  */
-function openServiceModal(serviceId, trigger) {
-  const service = SERVICE_DATA[serviceId];
-  if (!service || !modal) return;
-
+function openServiceModal(card, photos, trigger) {
   lastFocusedElement = trigger;
-  fillServiceModal(service);
+  fillServiceModal(card, photos);
   modal.hidden = false;
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
@@ -207,18 +170,16 @@ function setLightboxZoom(nextScale) {
 }
 
 document.querySelectorAll('[data-service]').forEach((card) => {
-  const button = card.querySelector('.card-action');
-  const serviceId = card.getAttribute('data-service');
-  if (!button || !serviceId) return;
+  const trigger = card.querySelector('summary');
+  const photos = SERVICE_PHOTOS[card.dataset.service];
+  if (!trigger || !photos || !modal) return;
 
+  // Keep the native disclosure usable without JavaScript and enhance it with the gallery.
+  trigger.setAttribute('aria-haspopup', 'dialog');
   card.addEventListener('click', (event) => {
     if (event.target.closest('a')) return;
-    openServiceModal(serviceId, card);
-  });
-  card.addEventListener('keydown', (event) => {
-    if (event.key !== 'Enter' && event.key !== ' ') return;
     event.preventDefault();
-    openServiceModal(serviceId, card);
+    openServiceModal(card, photos, trigger);
   });
 });
 
